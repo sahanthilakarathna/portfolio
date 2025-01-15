@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahan Thilakarathna - Portfolio</title>
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(90deg, #007bff, #00bcd4);
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        header .logo {
+            cursor: pointer;
+            display: flex;
+        }
+
+        header .logo img {
+            height: 100px;
+
+        }
+
+        header .logo .logo-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* NAV BAR */
+
+        header nav {
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: end;
+        }
+
+        .nav-button {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #007bff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-button:hover {
+            background-color: #0056b3;
+        }
+
+        section {
+            padding: 2rem;
+            max-width: 1240px;
+            margin: auto;
+            background: #fff;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .about {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            max-width: 1240px;
+        }
+
+        .about img {
+            width: 180px;
+            height: 190px;
+            border-radius: 50%;
+            margin-right: 2rem;
+            border: 5px solid #007bff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .about img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .about .text {
+            max-width: 600px;
+        }
+
+        .about h2 {
+            text-transform: uppercase;
+            color: #007bff;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .about p {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        h2 {
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 0.5rem;
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        /* PROJECTS=============================== */
+        .projects h2 {
+            color: #007bff;
+            border-bottom: none;
+            text-transform: uppercase;
+            font-size: 3rem;
+        }
+
+
+        .projects h2:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -50px;
+            width: 50px;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: skewX(-30deg);
+            animation: shine 2s infinite;
+        }
+
+        .project-card-topic {
+            background: linear-gradient(135deg, #007bff29, #2681b773);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+        }
+
+        .project-card-topic img {
+            height: 150px;
+        }
+
+        @keyframes shine {
+            0% {
+                left: -50px;
+            }
+
+            100% {
+                left: 150%;
+            }
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1240px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, #e0e0e0, #f8f8f8);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            /* position: relative; */
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(135deg, #007bff, #00bcd4);
+        }
+
+        .project-card .project-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 4px solid #007bff;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover .project-img {
+            transform: scale(1.1);
+        }
+
+        .project-card strong {
+            display: block;
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: #333;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .project-card:hover strong {
+            color: #fff;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            color: #555;
+            margin: 0.5rem 0;
+            transition: color 0.3s ease;
+        }
+
+        .project-card:hover p {
+            color: #fff;
+        }
+
+        .project-card .view-more {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fff;
+            color: #007bff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: bold;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .project-card:hover .view-more {
+            background: #007bff;
+            color: #fff;
+        }
+
+        .project-card .tech-img {
+            height: 50px;
+
+        }
+
+        .project-card-link {
+            text-decoration: none;
+            position: relative;
+        }
+
+        /* technologies========================= */
+
+        .technologies ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            padding: 0;
+        }
+
+        .technologies h2 {
+            border-bottom: 2px solid #007bff;
+            text-transform: uppercase;
+        }
+
+        .technologies ul li {
+            background: linear-gradient(145deg, #e0e0e0, #ffffff);
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .technologies ul li:hover {
+            transform: translateY(-5px);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .technologies img {
+            width: 30px;
+            height: 30px;
+        }
+
+        /* RESUME ================================*/
+        .resume-button {
+            display: block;
+            width: 200px;
+            margin: 1rem auto;
+            padding: 0.5rem;
+            text-align: center;
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            animation: blinking 1.5s infinite;
+        }
+
+        .resume h2 {
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #007bff;
+        }
+
+        .resume-button:hover {
+            background: #0056b3;
+        }
+
+        @keyframes blinking {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* FOOTER =================================*/
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #007bff;
+            color: #fff;
+        }
+
+
+        @media screen and (max-width: 768px) {
+            .about {
+                flex-direction: column;
+            }
+        }
+
+        /* COMPANY SECTION =====================================*/
+        .companies {
+            text-align: center;
+            padding: 2rem;
+            background: #f7f7f7;
+            /* Light background for contrast */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .companies h2 {
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #007bff;
+        }
+
+        .companies ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        .companies li {
+            background: #fff;
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            width: 200px;
+            /* Adjust size */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .companies li:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2);
+        }
+
+        .companies li img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+        }
+
+        .companies li strong {
+            display: block;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .companies li p {
+            font-size: 0.95rem;
+            color: #555;
+            margin-top: 0.5rem;
+        }
+
+        /* Loader Container */
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f0f8ff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        #loader h2 {
+            border-bottom: none;
+        }
+
+        /* Progress Bar Container */
+        #progress-bar {
+            width: 80%;
+            height: 20px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Progress */
+        #progress {
+            width: 0;
+            height: 100%;
+            background: linear-gradient(90deg, #007bff, #00bcd4);
+            border-radius: 10px;
+            transition: width 0.1s ease;
+        }
+
+        /* Percentage Text */
+        #percentage {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        /* CONTACT================== */
+        .contact-section {
+            text-align: center;
+            padding: 2rem;
+            background: #f7f7f7;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-section h2 {
+            border-bottom: 2px solid #007bff;
+        }
+
+        /* Contact Section Styling */
+        .contact-details {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .contact-section {
+            background-color: #f8f9fa;
+            color: #333;
+            padding: 60px 20px;
+        }
+
+        .contact-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .contact-section p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        .contact-item img {
+            height: 150px;
+            width: auto;
+        }
+
+        .contact-item a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .contact-item p {
+            color: #333;
+        }
+
+        .social-links {
+            margin-top: 60px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin-right: 15px;
+            font-size: 1rem;
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-links img {
+            height: 50px;
+            border-radius: 10px;
+        }
+
+        /* MOBILE NAV========================== */
+
+        .hamburger {
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .hamburger img {
+            height: 50px;
+        }
+
+
+        /* EDUCATION================================ */
+        .education-section {
+            padding: 60px 20px;
+            background: #f9f9f9;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #007bff;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            
+        }
+
+        .timeline {
+            position: relative;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .timeline-item .icon {
+            background: #007bff;
+            color: #fff;
+            font-size: 1.5rem;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-item .content {
+            background: #fff;
+            margin-left: 20px;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+    
+
+        .degree {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .institution {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .date {
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .details {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 10px;
+        }
+
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header .logo .logo-wrapper {
+
+                display: none;
+            }
+
+            h2 {
+                font-size: 2rem !important;
+            }
+
+            header {
+                padding: 1rem 20px;
+                justify-content: space-between;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-menu {
+                position: absolute;
+                top: 35px;
+                right: 70px;
+                background-color: #444;
+                flex-direction: column;
+                align-items: self-start;
+                gap: 10px;
+                padding: 10px;
+                border-radius: 5px;
+                display: none;
+                width: 50vw;
+                height: 50vh;
+            }
+
+            .nav-button {
+                margin: 0;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-button {
+                background-color: transparent;
+                width: 90%;
+                text-align: left;
+                border-radius: 0;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .timeline-item:nth-child(even) .content {
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo" id="logo">
+            <div class="logo-wrapper">
+                <img src="assets/images/logo.png" />
+            </div>
+            <div>
+                <h1>Sahan Thilakarathna</h1> <span>(BSc in Computer Science)</span><br>
+                <span>Senior Software Engineer - Magento 2 Specialist</span>
+            </div>
+
+        </div>
+        <button class="hamburger" aria-label="Toggle navigation">
+            <img src="assets/images/mob-nav.webp" />
+        </button>
+        <nav class="nav-menu">
+            <a href="#about" class="nav-button">About Me</a>
+            <a href="#projects" class="nav-button">Projects</a>
+            <a href="#companies" class="nav-button">Experience</a>
+            <a href="#technologies" class="nav-button">Technologies</a>
+            <a href="#resume" class="nav-button">Resume</a>
+        </nav>
+    </header>
+    <div id="loader">
+        <h2>Good Things Take Time</h2>
+        <div id="progress-bar">
+            <div id="progress"></div>
+        </div>
+        <p id="percentage">0%</p>
+    </div>
+    <section class="about" id="about">
+        <img src="assets/images/Sahan.jpeg" alt="Sahan Thilakarathna">
+        <div class="text">
+            <h2>About Me</h2>
+            <p>Hello! I am Sahan Thilakarathna, a passionate and dedicated software engineer with experience in building
+                modern, efficient, and scalable applications. I love solving complex problems and creating impactful
+                solutions. With a strong background in various programming languages and technologies, I aim to continue
+                growing as a developer and contribute to innovative projects that make a difference.</p>
+        </div>
+    </section>
+
+
+    <section class="projects" id="projects">
+        <div class="project-card-topic">
+            <h2>Projects </h2>
+            <img src="assets/images/projects.png" />
+
+        </div>
+        <a class="project-card-link" href="https://j20sports.com" target="_blank">
+
+            <div class="project-card">
+                <img class="project-img" src="assets/images/j20.gif" alt="J20Sports">
+                <img class="tech-img" src="assets/images/magento-2.webp">
+                <strong>J20Sports</strong>
+                <p>A magento 2 ecommerce website UAE.</p>
+            </div>
+        </a>
+        <a class="project-card-link" href="https://nomin.mn" target="_blank">
+            <div class="project-card">
+                <img class="project-img" src="assets/images/nomin.gif" alt="nomin">
+                <img class="tech-img" src="assets/images/magento-2.webp">
+                <strong>Nomin</strong>
+                <p>A magento 2 PWA ecommerce website Mongolia.</p>
+            </div>
+        </a>
+        <a class="project-card-link" href="https://chihuly.com/shop" target="_blank">
+            <div class="project-card">
+                <img class="project-img" src="assets/images/chihuly.gif" alt="Chihuly">
+                <img class="tech-img" src="assets/images/magento-2.webp">
+                <strong>Chihuly</strong>
+                <p>A magento 2 ecommerce website base in USA.</p>
+            </div>
+        </a>
+        <a class="project-card-link" href="https://kiddoz.lk" target="_blank">
+            <div class="project-card">
+                <img class="project-img" src="assets/images/kiddoz.gif" alt="Kiddoz">
+                <img class="tech-img" src="assets/images/magento-2.webp">
+                <strong>Kiddoz</strong>
+                <p>A magento 2 ecommerce website in Sri Lanka.</p>
+            </div>
+        </a>
+        <a class="project-card-link" href="https://longsong.com.au/" target="_blank">
+            <div class="project-card">
+                <img class="project-img" src="assets/images/longsong.gif" alt="LongSong">
+                <img class="tech-img" src="assets/images/contentful.webp">
+                <strong>LongSong</strong>
+                <p>A contentful static website based in Australia.</p>
+            </div>
+        </a>
+        <a class="project-card-link" href="https://bonz.com" target="_blank">
+            <div class="project-card">
+                <img class="project-img" src="assets/images/bonz.gif" alt="BONZ">
+                <img class="tech-img" src="assets/images/magento-2.webp">
+                <strong>BONZ</strong>
+                <p>A magento 2 ecommerce website based in New Zealand.</p>
+            </div>
+        </a>
+        <a class="project-card-link" href="https://smithstbistrot.com.au" target="_blank">
+            <div class="project-card">
+                <img class="project-img" src="assets/images/smith.gif" alt="Smith">
+                <img class="tech-img" src="assets/images/contentful.webp">
+                <strong>Smith St Bistrot</strong>
+                <p>A magento 2 ecommerce website based in Australia.</p>
+            </div>
+        </a>
+        <a class="project-card-link" href="https://vereina-shop.rhb.ch/" target="_blank">
+            <div class="project-card">
+                <img class="project-img" src="assets/images/rhb.gif" alt="rhb">
+                <img class="tech-img" src="assets/images/magento-2.webp">
+                <strong>Adega - RHB</strong>
+                <p>A magento 2 ecommerce website based in Switzerland.</p>
+            </div>
+        </a>
+        <a class="project-card-link" href="https://shop.faehre.ch/" target="_blank">
+            <div class="project-card">
+                <img class="project-img" src="assets/images/fhm.gif" alt="fhm">
+                <img class="tech-img" src="assets/images/magento-2.webp">
+                <strong>Adega - FHM</strong>
+                <p>A magento 2 ecommerce website based in Switzerland.</p>
+            </div>
+        </a>
+        <a class="project-card-link" href="https://www.biopak.com/" target="_blank">
+            <div class="project-card">
+                <img class="project-img" src="assets/images/biopak.gif" alt="biopak">
+                <img class="tech-img" src="assets/images/magento-2.webp">
+                <strong>Biopak</strong>
+                <p>A magento 2 ecommerce website based in Australia.</p>
+            </div>
+        </a>
+        <a class="project-card-link" href="https://buyabans.com" target="_blank">
+            <div class="project-card">
+                <img class="project-img" src="assets/images/abans.webp" alt="buyabans">
+                <img class="tech-img" src="assets/images/magento-2.webp">
+                <strong>Buyabans</strong>
+                <p>A magento 2 ecommerce website based in Sri Lanka.</p>
+            </div>
+        </a>
+        <a class="project-card-link" href="https://arienti.lk" target="_blank">
+            <div class="project-card">
+                <img class="project-img" src="assets/images/arienti.webp" alt="arienti" loading="lazy">
+                <img class="tech-img" src="assets/images/magento-2.webp" loading="lazy">
+                <strong>Arienti</strong>
+                <p>A magento 2 ecommerce website based in Sri Lanka.</p>
+            </div>
+        </a>
+    </section>
+
+    <section class="technologies" id="technologies">
+        <h2>Technologies</h2>
+        <ul>
+            <li><img src="assets/images/magentologo.png" alt="magento2"> Magento 2</li>
+            <li><img src="assets/images/pwa.webp" alt="magentopwa"> Magento 2 PWA</li>
+            <li><img src="assets/images/python.png" alt="Python"> PHP</li>
+            <li><img src="assets/images/react.png" alt="reactjs"> React js</li>
+            <li><img src="assets/images/node.png" alt="node"> Node js</li>
+            <li><img src="assets/images/python.png" alt="python"> Python</li>
+            <li><img src="assets/images/aws.png" alt="aws"> AWS</li>
+            <li><img src="assets/images/mysql.png" alt="SQL"> MYSQL</li>
+            <li><img src="assets/images/mongodb.svg" alt="mongodb"> MongoDB</li>
+        </ul>
+    </section>
+
+    <section class="companies" id="companies">
+        <h2>Experience</h2>
+        <ul>
+            <li>
+                <img src="assets/images/ewing.png" alt="ewing">
+                <strong>Ewing Solutions</strong>
+                <p>Associate Software Engineer</p>
+                <p>2019 June - 2020 Feb</p>
+            </li>
+            <li>
+                <img src="assets/images/logo-nx.png" alt="neosolax">
+                <strong>NeoSolax</strong>
+                <p>Associate Software Engineer</p>
+                <p>2020 Feb - 2022 Jan</p>
+            </li>
+            <li>
+                <img src="assets/images/logo-nx.png" alt="neosolax">
+                <strong>NeoSolax</strong>
+                <p>Software Engineer</p>
+                <p>2022 Jan - 2022 Jun</p>
+            </li>
+            <li>
+                <img src="assets/images/logo-nx.png" alt="neosolax">
+                <strong>NeoSolax</strong>
+                <p>Senior Software Engineer</p>
+                <p>2022 June - Present</p>
+            </li>
+        </ul>
+    </section>
+    <section id="education" class="education-section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <!-- First Item -->
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                    <div class="icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="content">
+                        <h3 class="degree">Bachelor of Science in Computer Science</h3>
+                        <p class="institution">University of Jaffna</p>
+                        <p class="date">2015 - 2019</p>
+                    </div>
+                </div>
+                <!-- Second Item -->
+                <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+                    <div class="icon"><i class="fas fa-book"></i></div>
+                    <div class="content">
+                        <h3 class="degree">Advanced Level</h3>
+                        <p class="institution">Kegalu Vidyalaya, Kegalle </p>
+                        <p class="date">2013</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out via any of the methods below!</p>
+
+            <div class="contact-details">
+                <div class="contact-item">
+                    <img src="assets/images/email.webp" alt="Email Icon" />
+                    <div>
+                        <h3>Email</h3>
+                        <a href="mailto:sahanrajitha@gmail.com">sahanrajitha@gmail.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <img src="assets/images/address.png" alt="Address Icon" />
+                    <div>
+                        <h3>Address</h3>
+                        <p>Imbulana,<br> Ruwanwella, <br>Sri Lanka</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <img src="assets/images/phone.png" alt="Phone Icon" />
+                    <div>
+                        <h3>Phone</h3>
+                        <a href="tel:+94 71 34 77 808">+94 71 34 77 808</p> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/sahan-thilakarathna/" target="_blank"><img
+                        src="assets/images/linkedin.png" /></a>
+                <a href="https://web.facebook.com/sahan.rajitha/" target="_blank"><img src="assets/images/fb.png" /></a>
+                <a href="https://x.com/sahanrajitha1" target="_blank"><img src="assets/images/X_icon_2.svg" /></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="resume" id="resume">
+        <h2>Resume</h2>
+        <a href="_Resume - 2025.pdf" class="resume-button" download target="_blank">Download My Resume</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sahan Thilakarathna. All Rights Reserved.</p>
+    </footer>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const progress = document.getElementById("progress");
+        const percentage = document.getElementById("percentage");
+        const loader = document.getElementById("loader");
+
+        let progressValue = 0;
+
+        const interval = setInterval(() => {
+            progressValue += 1; // Increment progress
+            progress.style.width = `${progressValue}%`; // Update progress bar width
+            percentage.textContent = `Loading ${progressValue}%`; // Update percentage text
+
+            if (progressValue === 100) {
+                clearInterval(interval); // Stop interval when 100% is reached
+                loader.style.display = "none"; // Hide loader
+            }
+        }, 20); // Adjust interval time for desired loading speed
+    });
+
+    // JavaScript for toggling the mobile menu
+    document.addEventListener("DOMContentLoaded", () => {
+        const logo = document.getElementById('logo');
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+        });
+        logo.addEventListener("click", () => {
+            window.location.href = '#'
+        })
+    });
+    AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        once: true, // Whether animation should happen only once
+    });
+</script>
+
+</html>
