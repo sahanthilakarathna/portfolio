@@ -30,7 +30,7 @@
         header {
             position:sticky;
             top:0;
-            z-index:99999;
+            z-index:9;
             background: linear-gradient(90deg, #007bff, #00bcd4);
             color: #fff;
             padding: 1rem 0;
@@ -210,6 +210,12 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
             cursor: pointer;
             height: 100%;
+        }
+        .project-card.disabled{
+            pointer-events: none;
+            cursor:not-allowed;
+            background: linear-gradient(135deg, #5c5c5c, #f8f8f8);
+            opacity: 0.5;
         }
 
         .project-card:hover {
@@ -654,7 +660,42 @@
             color: #666;
             margin-top: 10px;
         }
-
+   /* PROJECT POPUP ============== */
+   .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+        .popup-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+        }
+        .popup-content a{
+            text-decoration: none;
+        }
+        .popup-content img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .popup-content h3, .popup-content p {
+            margin: 10px 0;
+        }
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+        }
 
 
         /* Responsive Design */
@@ -770,103 +811,115 @@
             <img src="assets/images/projects.png" />
 
         </div>
-        <a class="project-card-link" href="https://j20sports.com" target="_blank">
+    
+        <div class="project-card" data-url="https://j20sports.com" data-title="J20Sports" data-image="assets/images/j20.gif" data-tech="Magento 2 | PHP | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
+            <img src="assets/images/j20.gif" alt="J20Sports">
+            <img class="tech-img" src="assets/images/magento-2.webp">
+            <strong>J20Sports</strong>
+            <p>A Magento 2 ecommerce website in UAE.</p>
+        </div>
 
-            <div class="project-card">
-                <img class="project-img" src="assets/images/j20.gif" alt="J20Sports">
-                <img class="tech-img" src="assets/images/magento-2.webp">
-                <strong>J20Sports</strong>
-                <p>A magento 2 ecommerce website UAE.</p>
+        <div class="project-card" data-url="https://nomin.mn" data-title="Nomin" data-image="assets/images/nomin.gif" data-tech="Magento 2 PWA | PHP | ReactJs | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
+            <img src="assets/images/nomin.gif" alt="Nomin">
+            <img class="tech-img" src="assets/images/magento-2.webp">
+            <strong>Nomin</strong>
+            <p>A Magento 2 PWA ecommerce website in Mongolia.</p>
+        </div>
+        <div class="project-card" data-url="https://chihuly.com/shop" data-title="Chihuly" data-image="assets/images/chihuly.gif" data-tech="Magento 2 | PHP | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
+            <img src="assets/images/chihuly.gif" alt="Chihuly">
+            <img class="tech-img" src="assets/images/magento-2.webp">
+            <strong>Chihuly</strong>
+            <p>A Magento 2 ecommerce website in USA.</p>
+        </div>
+        <div class="project-card" data-url="https://kiddoz.lk" data-title="Kiddoz" data-image="assets/images/kiddoz.gif" data-tech="Magento 2 | PHP | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
+            <img class="project-img" src="assets/images/kiddoz.gif" alt="Kiddoz">
+            <img class="tech-img" src="assets/images/magento-2.webp">
+            <strong>Kiddoz</strong>
+            <p>A Magento 2 ecommerce website in Sri Lanka.</p>
+        </div>
+        
+        <div class="project-card" data-url="https://longsong.com.au" data-title="LongSong" data-image="assets/images/longsong.gif" data-tech="Contentful | ReactJs" data-role="Full Stack Developer">
+            <img class="project-img" src="assets/images/longsong.gif" alt="LongSong">
+            <img class="tech-img" src="assets/images/contentful.webp">
+            <strong>LongSong</strong>
+            <p>A Contentful static website based in Australia.</p>
+        </div>
+        
+        <div class="project-card" data-url="https://bonz.com" data-title="BONZ" data-image="assets/images/bonz.gif" data-tech="Magento 2 | PHP | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
+            <img class="project-img" src="assets/images/bonz.gif" alt="BONZ">
+            <img class="tech-img" src="assets/images/magento-2.webp">
+            <strong>BONZ</strong>
+            <p>A Magento 2 ecommerce website based in New Zealand.</p>
+        </div>
+        
+        <div class="project-card" data-url="https://smithstbistrot.com.au" data-title="Smith St Bistrot" data-image="assets/images/smith.gif" data-tech="Contentful | ReactJs" data-role="Full Stack Developer">
+            <img class="project-img" src="assets/images/smith.gif" alt="Smith">
+            <img class="tech-img" src="assets/images/contentful.webp">
+            <strong>Smith St Bistrot</strong>
+            <p>A Contentful static website based in Australia.</p>
+        </div>
+        
+        <div class="project-card" data-url="https://vereina-shop.rhb.ch" data-title="Adega - RHB" data-image="assets/images/rhb.gif" data-tech="Magento 2 | PHP | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
+            <img class="project-img" src="assets/images/rhb.gif" alt="RHB">
+            <img class="tech-img" src="assets/images/magento-2.webp">
+            <strong>Adega - RHB</strong>
+            <p>A Magento 2 ecommerce website based in Switzerland.</p>
+        </div>
+        
+        <div class="project-card" data-url="https://shop.faehre.ch" data-title="Adega - FHM" data-image="assets/images/fhm.gif" data-tech="Magento 2 | PHP | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
+            <img class="project-img" src="assets/images/fhm.gif" alt="FHM">
+            <img class="tech-img" src="assets/images/magento-2.webp">
+            <strong>Adega - FHM</strong>
+            <p>A Magento 2 ecommerce website based in Switzerland.</p>
+        </div>
+        
+        <div class="project-card" data-url="https://www.biopak.com" data-title="Biopak" data-image="assets/images/biopak.gif" data-tech="Magento 2 | PHP | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
+            <img class="project-img" src="assets/images/biopak.gif" alt="Biopak">
+            <img class="tech-img" src="assets/images/magento-2.webp">
+            <strong>Biopak</strong>
+            <p>A Magento 2 ecommerce website based in Australia.</p>
+        </div>
+        
+        <div class="project-card" data-url="https://www.buyabans.com" data-title="Buyabans" data-image="assets/images/abans.webp" data-tech="Magento 2 | PHP | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
+            <img class="project-img" src="assets/images/abans.webp" alt="Buyabans">
+            <img class="tech-img" src="assets/images/magento-2.webp">
+            <strong>Buyabans</strong>
+            <p>A Magento 2 ecommerce website based in Sri Lanka.</p>
+        </div>
+        
+        <div class="project-card" data-url="https://arienti.lk" data-title="Arienti" data-image="assets/images/arienti.webp" data-tech="Magento 2 | PHP | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
+            <img class="project-img" src="assets/images/arienti.webp" alt="Arienti">
+            <img class="tech-img" src="assets/images/magento-2.webp">
+            <strong>Arienti</strong>
+            <p>A Magento 2 ecommerce website based in Sri Lanka.</p>
+        </div>
+        <div class="project-card" data-url="https://github.com/sahanthilakarathna/recomdo-shopify" data-title="Shopify Custom App Repo" data-image="assets/images/Shopify.webp" data-tech="Shopify | Liquid | Nodejs | ReactJs | Remix" data-role="Full Stack Developer">
+            <img class="project-img" src="assets/images/Shopify.webp" alt="Shopify">
+            <img class="tech-img" src="assets/images/shopifylogo.png">
+            <strong>Shopify Custom App</strong>
+            <p>A Shopify custom app developed for a AI search engine developed using python</p>
+        </div>
+        <div class="project-card" data-url="https://www.neosolax.com.au" data-title="NeoSolax Website" data-image="assets/images/Neosolax-Logo.png" data-tech="Wordpress | PHP | Javascript | CSS | DigitalOcean Droplets" data-role="Full Stack Developer">
+            <img class="project-img" src="assets/images/Neosolax-Logo.png" alt="Shopify">
+            <img class="tech-img" src="assets/images/wordpress.png">
+            <strong>NeoSolax Website</strong>
+            <p>Company website for NeoSolax Pty</p>
+        </div>
+        <div class="project-card disabled">
+            <img class="project-img" src="assets/images/coming-soon.avif" alt="Shopify">
+            <img class="tech-img" src="assets/images/shopifylogo.png">
+            <strong>Online Sex Dolls Shop(18+)</strong>
+            <p>A Shopify Store in Australia</p>
+        </div>
+        <div class="popup-overlay" id="popup-overlay">
+            <div class="popup-content">
+                <span class="popup-close" id="popup-close">&times;</span>
+                <img id="popup-image" src="" alt="">
+                <a id="popup-title-link"><h3 id="popup-title"></h3></a>
+                <p><strong>Technologies:</strong> <span id="popup-tech"></span></p>
+                <p><strong>Role:</strong> <span id="popup-role"></span></p>
             </div>
-        </a>
-        <a class="project-card-link" href="https://nomin.mn" target="_blank">
-            <div class="project-card">
-                <img class="project-img" src="assets/images/nomin.gif" alt="nomin">
-                <img class="tech-img" src="assets/images/magento-2.webp">
-                <strong>Nomin</strong>
-                <p>A magento 2 PWA ecommerce website Mongolia.</p>
-            </div>
-        </a>
-        <a class="project-card-link" href="https://chihuly.com/shop" target="_blank">
-            <div class="project-card">
-                <img class="project-img" src="assets/images/chihuly.gif" alt="Chihuly">
-                <img class="tech-img" src="assets/images/magento-2.webp">
-                <strong>Chihuly</strong>
-                <p>A magento 2 ecommerce website base in USA.</p>
-            </div>
-        </a>
-        <a class="project-card-link" href="https://kiddoz.lk" target="_blank">
-            <div class="project-card">
-                <img class="project-img" src="assets/images/kiddoz.gif" alt="Kiddoz">
-                <img class="tech-img" src="assets/images/magento-2.webp">
-                <strong>Kiddoz</strong>
-                <p>A magento 2 ecommerce website in Sri Lanka.</p>
-            </div>
-        </a>
-        <a class="project-card-link" href="https://longsong.com.au/" target="_blank">
-            <div class="project-card">
-                <img class="project-img" src="assets/images/longsong.gif" alt="LongSong">
-                <img class="tech-img" src="assets/images/contentful.webp">
-                <strong>LongSong</strong>
-                <p>A contentful static website based in Australia.</p>
-            </div>
-        </a>
-        <a class="project-card-link" href="https://bonz.com" target="_blank">
-            <div class="project-card">
-                <img class="project-img" src="assets/images/bonz.gif" alt="BONZ">
-                <img class="tech-img" src="assets/images/magento-2.webp">
-                <strong>BONZ</strong>
-                <p>A magento 2 ecommerce website based in New Zealand.</p>
-            </div>
-        </a>
-        <a class="project-card-link" href="https://smithstbistrot.com.au" target="_blank">
-            <div class="project-card">
-                <img class="project-img" src="assets/images/smith.gif" alt="Smith">
-                <img class="tech-img" src="assets/images/contentful.webp">
-                <strong>Smith St Bistrot</strong>
-                <p>A magento 2 ecommerce website based in Australia.</p>
-            </div>
-        </a>
-        <a class="project-card-link" href="https://vereina-shop.rhb.ch/" target="_blank">
-            <div class="project-card">
-                <img class="project-img" src="assets/images/rhb.gif" alt="rhb">
-                <img class="tech-img" src="assets/images/magento-2.webp">
-                <strong>Adega - RHB</strong>
-                <p>A magento 2 ecommerce website based in Switzerland.</p>
-            </div>
-        </a>
-        <a class="project-card-link" href="https://shop.faehre.ch/" target="_blank">
-            <div class="project-card">
-                <img class="project-img" src="assets/images/fhm.gif" alt="fhm">
-                <img class="tech-img" src="assets/images/magento-2.webp">
-                <strong>Adega - FHM</strong>
-                <p>A magento 2 ecommerce website based in Switzerland.</p>
-            </div>
-        </a>
-        <a class="project-card-link" href="https://www.biopak.com/" target="_blank">
-            <div class="project-card">
-                <img class="project-img" src="assets/images/biopak.gif" alt="biopak">
-                <img class="tech-img" src="assets/images/magento-2.webp">
-                <strong>Biopak</strong>
-                <p>A magento 2 ecommerce website based in Australia.</p>
-            </div>
-        </a>
-        <a class="project-card-link" href="https://buyabans.com" target="_blank">
-            <div class="project-card">
-                <img class="project-img" src="assets/images/abans.webp" alt="buyabans">
-                <img class="tech-img" src="assets/images/magento-2.webp">
-                <strong>Buyabans</strong>
-                <p>A magento 2 ecommerce website based in Sri Lanka.</p>
-            </div>
-        </a>
-        <a class="project-card-link" href="https://arienti.lk" target="_blank">
-            <div class="project-card">
-                <img class="project-img" src="assets/images/arienti.webp" alt="arienti" loading="lazy">
-                <img class="tech-img" src="assets/images/magento-2.webp" loading="lazy">
-                <strong>Arienti</strong>
-                <p>A magento 2 ecommerce website based in Sri Lanka.</p>
-            </div>
-        </a>
+        </div>
     </section>
 
     <section class="technologies" id="technologies">
@@ -875,6 +928,8 @@
             <li><img src="assets/images/magentologo.png" alt="magento2"> Magento 2</li>
             <li><img src="assets/images/pwa.webp" alt="magentopwa"> Magento 2 PWA</li>
             <li><img src="assets/images/python.png" alt="Python"> PHP</li>
+            <li><img src="assets/images/shopifylogo.png" alt="Shopify"> Shopify</li>
+            <li><img src="assets/images/wordpress.png" alt="Wordpress"> Wordpress</li>
             <li><img src="assets/images/react.png" alt="reactjs"> React js</li>
             <li><img src="assets/images/node.png" alt="node"> Node js</li>
             <li><img src="assets/images/python.png" alt="python"> Python</li>
@@ -1024,6 +1079,44 @@
         duration: 1000, // Animation duration in milliseconds
         once: true, // Whether animation should happen only once
     });
+
+    const projectCards = document.querySelectorAll('.project-card');
+            const popupOverlay = document.getElementById('popup-overlay');
+            const popupImage = document.getElementById('popup-image');
+            const popupTitle = document.getElementById('popup-title');
+            const popupTitleLink = document.getElementById('popup-title-link');
+            const popupTech = document.getElementById('popup-tech');
+            const popupRole = document.getElementById('popup-role');
+            const popupClose = document.getElementById('popup-close');
+
+            projectCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const title = card.getAttribute('data-title');
+                    const url = card.getAttribute('data-url');
+                    const image = card.getAttribute('data-image');
+                    const tech = card.getAttribute('data-tech');
+                    const role = card.getAttribute('data-role');
+
+                    popupTitle.textContent = title;
+                    popupImage.src = image;
+                    popupTitleLink.href = url;
+                    popupTitleLink.target ='_blank';
+                    popupTech.textContent = tech;
+                    popupRole.textContent = role;
+
+                    popupOverlay.style.display = 'flex';
+                });
+            });
+
+            popupClose.addEventListener('click', () => {
+                popupOverlay.style.display = 'none';
+            });
+
+            popupOverlay.addEventListener('click', (e) => {
+                if (e.target === popupOverlay) {
+                    popupOverlay.style.display = 'none';
+                }
+            });
 </script>
 
 </html>
