@@ -231,6 +231,9 @@
             border-bottom: 4px solid #007bff;
             transition: transform 0.3s ease;
         }
+        .project-card .project-img.blur {
+            filter: blur(4px);
+        }
 
         .project-card:hover .project-img {
             transform: scale(1.1);
@@ -697,6 +700,26 @@
             font-size: 20px;
         }
 
+        .typewriter h2 {
+            overflow: hidden; /* Ensures the content is not revealed until the animation */
+            border-right: .15em solid rgb(71, 99, 224); /* The typwriter cursor */
+            white-space: nowrap; /* Keeps the content on a single line */
+            margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+            letter-spacing: .15em; /* Adjust as needed */
+            animation: 
+                typing 10s steps(40, end),
+                blink-caret .75s step-end infinite;
+            border-bottom: none!important;
+            
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 75% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(46, 59, 182); }
+}
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -795,7 +818,7 @@
     </div>
     <section class="about" id="about">
         <img src="assets/images/Sahan.jpeg" alt="Sahan Thilakarathna">
-        <div class="text">
+        <div class="text typewriter">
             <h2>About Me</h2>
             <p>Hello! I am Sahan Thilakarathna, a passionate and dedicated software engineer with experience in building
                 modern, efficient, and scalable applications. I love solving complex problems and creating impactful
@@ -812,105 +835,113 @@
 
         </div>
     
-        <div class="project-card" data-url="https://j20sports.com" data-title="J20Sports" data-image="assets/images/j20.gif" data-tech="Magento 2 | PHP | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
+        <div class="project-card" data-aos="fade-up" data-url="https://j20sports.com" data-title="J20Sports" data-image="assets/images/j20.gif" data-tech="Magento 2 | PHP | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
             <img src="assets/images/j20.gif" alt="J20Sports">
             <img class="tech-img" src="assets/images/magento-2.webp">
             <strong>J20Sports</strong>
             <p>A Magento 2 ecommerce website in UAE.</p>
         </div>
 
-        <div class="project-card" data-url="https://nomin.mn" data-title="Nomin" data-image="assets/images/nomin.gif" data-tech="Magento 2 PWA | PHP | ReactJs | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
+        <div class="project-card" data-aos="fade-up" data-url="https://nomin.mn" data-title="Nomin" data-image="assets/images/nomin.gif" data-tech="Magento 2 PWA | PHP | ReactJs | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
             <img src="assets/images/nomin.gif" alt="Nomin">
             <img class="tech-img" src="assets/images/magento-2.webp">
             <strong>Nomin</strong>
             <p>A Magento 2 PWA ecommerce website in Mongolia.</p>
         </div>
-        <div class="project-card" data-url="https://chihuly.com/shop" data-title="Chihuly" data-image="assets/images/chihuly.gif" data-tech="Magento 2 | PHP | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
+        <div class="project-card" data-aos="fade-up" data-url="https://chihuly.com/shop" data-title="Chihuly" data-image="assets/images/chihuly.gif" data-tech="Magento 2 | PHP | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
             <img src="assets/images/chihuly.gif" alt="Chihuly">
             <img class="tech-img" src="assets/images/magento-2.webp">
             <strong>Chihuly</strong>
             <p>A Magento 2 ecommerce website in USA.</p>
         </div>
-        <div class="project-card" data-url="https://kiddoz.lk" data-title="Kiddoz" data-image="assets/images/kiddoz.gif" data-tech="Magento 2 | PHP | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
+        <div class="project-card" data-aos="fade-up" data-url="https://www.sexdollsonline.com.au/" data-title="Sex Dolls Online" data-image="assets/images/sexdonline.gif" data-tech="Shopify | Liquid | Javascript | CSS" data-role="Full Stack Developer">
+            <img class="project-img blur" src="assets/images/sexdonline.gif" alt="sex-dolls-online">
+            <img class="tech-img" src="assets/images/shopifylogo.png">
+            <strong>Online Sex Dolls Shop(18+)</strong>
+            <p>A Shopify Store in Australia</p>
+        </div>
+        <div class="project-card" data-aos="fade-up" data-url="https://kiddoz.lk" data-title="Kiddoz" data-image="assets/images/kiddoz.gif" data-tech="Magento 2 | PHP | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
             <img class="project-img" src="assets/images/kiddoz.gif" alt="Kiddoz">
             <img class="tech-img" src="assets/images/magento-2.webp">
             <strong>Kiddoz</strong>
             <p>A Magento 2 ecommerce website in Sri Lanka.</p>
         </div>
         
-        <div class="project-card" data-url="https://longsong.com.au" data-title="LongSong" data-image="assets/images/longsong.gif" data-tech="Contentful | ReactJs" data-role="Full Stack Developer">
+        <div class="project-card" data-aos="fade-up" data-url="https://longsong.com.au" data-title="LongSong" data-image="assets/images/longsong.gif" data-tech="Contentful | ReactJs" data-role="Full Stack Developer">
             <img class="project-img" src="assets/images/longsong.gif" alt="LongSong">
             <img class="tech-img" src="assets/images/contentful.webp">
             <strong>LongSong</strong>
             <p>A Contentful static website based in Australia.</p>
         </div>
         
-        <div class="project-card" data-url="https://bonz.com" data-title="BONZ" data-image="assets/images/bonz.gif" data-tech="Magento 2 | PHP | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
+        <div class="project-card" data-aos="fade-up" data-url="https://bonz.com" data-title="BONZ" data-image="assets/images/bonz.gif" data-tech="Magento 2 | PHP | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
             <img class="project-img" src="assets/images/bonz.gif" alt="BONZ">
             <img class="tech-img" src="assets/images/magento-2.webp">
             <strong>BONZ</strong>
             <p>A Magento 2 ecommerce website based in New Zealand.</p>
         </div>
         
-        <div class="project-card" data-url="https://smithstbistrot.com.au" data-title="Smith St Bistrot" data-image="assets/images/smith.gif" data-tech="Contentful | ReactJs" data-role="Full Stack Developer">
+        <div class="project-card" data-aos="fade-up" data-url="https://smithstbistrot.com.au" data-title="Smith St Bistrot" data-image="assets/images/smith.gif" data-tech="Contentful | ReactJs" data-role="Full Stack Developer">
             <img class="project-img" src="assets/images/smith.gif" alt="Smith">
             <img class="tech-img" src="assets/images/contentful.webp">
             <strong>Smith St Bistrot</strong>
             <p>A Contentful static website based in Australia.</p>
         </div>
         
-        <div class="project-card" data-url="https://vereina-shop.rhb.ch" data-title="Adega - RHB" data-image="assets/images/rhb.gif" data-tech="Magento 2 | PHP | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
+        <div class="project-card" data-aos="fade-up" data-url="https://vereina-shop.rhb.ch" data-title="Adega - RHB" data-image="assets/images/rhb.gif" data-tech="Magento 2 | PHP | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
             <img class="project-img" src="assets/images/rhb.gif" alt="RHB">
             <img class="tech-img" src="assets/images/magento-2.webp">
             <strong>Adega - RHB</strong>
             <p>A Magento 2 ecommerce website based in Switzerland.</p>
         </div>
         
-        <div class="project-card" data-url="https://shop.faehre.ch" data-title="Adega - FHM" data-image="assets/images/fhm.gif" data-tech="Magento 2 | PHP | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
+        <div class="project-card" data-aos="fade-up" data-url="https://shop.faehre.ch" data-title="Adega - FHM" data-image="assets/images/fhm.gif" data-tech="Magento 2 | PHP | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
             <img class="project-img" src="assets/images/fhm.gif" alt="FHM">
             <img class="tech-img" src="assets/images/magento-2.webp">
             <strong>Adega - FHM</strong>
             <p>A Magento 2 ecommerce website based in Switzerland.</p>
         </div>
         
-        <div class="project-card" data-url="https://www.biopak.com" data-title="Biopak" data-image="assets/images/biopak.gif" data-tech="Magento 2 | PHP | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
+        <div class="project-card" data-aos="fade-up" data-url="https://www.biopak.com" data-title="Biopak" data-image="assets/images/biopak.gif" data-tech="Magento 2 | PHP | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
             <img class="project-img" src="assets/images/biopak.gif" alt="Biopak">
             <img class="tech-img" src="assets/images/magento-2.webp">
             <strong>Biopak</strong>
             <p>A Magento 2 ecommerce website based in Australia.</p>
         </div>
         
-        <div class="project-card" data-url="https://www.buyabans.com" data-title="Buyabans" data-image="assets/images/abans.webp" data-tech="Magento 2 | PHP | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
+        <div class="project-card" data-aos="fade-up" data-url="https://www.buyabans.com" data-title="Buyabans" data-image="assets/images/abans.webp" data-tech="Magento 2 | PHP | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
             <img class="project-img" src="assets/images/abans.webp" alt="Buyabans">
             <img class="tech-img" src="assets/images/magento-2.webp">
             <strong>Buyabans</strong>
             <p>A Magento 2 ecommerce website based in Sri Lanka.</p>
         </div>
         
-        <div class="project-card" data-url="https://arienti.lk" data-title="Arienti" data-image="assets/images/arienti.webp" data-tech="Magento 2 | PHP | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
+        <div class="project-card" data-aos="fade-up" data-url="https://arienti.lk" data-title="Arienti" data-image="assets/images/arienti.webp" data-tech="Magento 2 | PHP | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
             <img class="project-img" src="assets/images/arienti.webp" alt="Arienti">
             <img class="tech-img" src="assets/images/magento-2.webp">
             <strong>Arienti</strong>
             <p>A Magento 2 ecommerce website based in Sri Lanka.</p>
         </div>
-        <div class="project-card" data-url="https://github.com/sahanthilakarathna/recomdo-shopify" data-title="Shopify Custom App Repo" data-image="assets/images/Shopify.webp" data-tech="Shopify | Liquid | Nodejs | ReactJs | Remix" data-role="Full Stack Developer">
+        <div class="project-card" data-aos="fade-up" data-url="https://github.com/sahanthilakarathna/recomdo-shopify" data-title="Shopify Custom App Repo" data-image="assets/images/Shopify.webp" data-tech="Shopify | Liquid | Nodejs | ReactJs | Remix" data-role="Full Stack Developer">
             <img class="project-img" src="assets/images/Shopify.webp" alt="Shopify">
             <img class="tech-img" src="assets/images/shopifylogo.png">
             <strong>Shopify Custom App</strong>
             <p>A Shopify custom app developed for a AI search engine developed using python</p>
         </div>
-        <div class="project-card" data-url="https://www.neosolax.com.au" data-title="NeoSolax Website" data-image="assets/images/Neosolax-Logo.png" data-tech="Wordpress | PHP | Javascript | CSS | DigitalOcean Droplets" data-role="Full Stack Developer">
+        <div class="project-card" data-aos="fade-up" data-url="https://www.neosolax.com.au" data-title="NeoSolax Website" data-image="assets/images/Neosolax-Logo.png" data-tech="Wordpress | PHP | Javascript | CSS | DigitalOcean Droplets" data-role="Full Stack Developer">
             <img class="project-img" src="assets/images/Neosolax-Logo.png" alt="Shopify">
             <img class="tech-img" src="assets/images/wordpress.png">
             <strong>NeoSolax Website</strong>
             <p>Company website for NeoSolax Pty</p>
         </div>
-        <div class="project-card disabled">
-            <img class="project-img" src="assets/images/coming-soon.avif" alt="Shopify">
-            <img class="tech-img" src="assets/images/shopifylogo.png">
-            <strong>Online Sex Dolls Shop(18+)</strong>
-            <p>A Shopify Store in Australia</p>
+
+        <div class="project-card disabled" data-aos="fade-up">
+            <img class="project-img" src="assets/images/coming-soon.avif" alt="nextjs">
+            <img class="tech-img" src="assets/images/nextjslogo.png">
+            <strong>Content Marketing</strong>
+            <p>Website For SEO Agency</p>
         </div>
+      
         <div class="popup-overlay" id="popup-overlay">
             <div class="popup-content">
                 <span class="popup-close" id="popup-close">&times;</span>
@@ -925,42 +956,43 @@
     <section class="technologies" id="technologies">
         <h2>Technologies</h2>
         <ul>
-            <li><img src="assets/images/magentologo.png" alt="magento2"> Magento 2</li>
-            <li><img src="assets/images/pwa.webp" alt="magentopwa"> Magento 2 PWA</li>
-            <li><img src="assets/images/python.png" alt="Python"> PHP</li>
-            <li><img src="assets/images/shopifylogo.png" alt="Shopify"> Shopify</li>
-            <li><img src="assets/images/wordpress.png" alt="Wordpress"> Wordpress</li>
-            <li><img src="assets/images/react.png" alt="reactjs"> React js</li>
-            <li><img src="assets/images/node.png" alt="node"> Node js</li>
-            <li><img src="assets/images/python.png" alt="python"> Python</li>
-            <li><img src="assets/images/aws.png" alt="aws"> AWS</li>
-            <li><img src="assets/images/mysql.png" alt="SQL"> MYSQL</li>
-            <li><img src="assets/images/mongodb.svg" alt="mongodb"> MongoDB</li>
+            <li data-aos="flip-left"><img src="assets/images/magentologo.png" alt="magento2"> Magento 2</li>
+            <li data-aos="flip-left"><img src="assets/images/pwa.webp" alt="magentopwa"> Magento 2 PWA</li>
+            <li data-aos="flip-left"><img src="assets/images/python.png" alt="Python"> PHP</li>
+            <li data-aos="flip-left"><img src="assets/images/shopifylogo.png" alt="Shopify"> Shopify</li>
+            <li data-aos="flip-left"><img src="assets/images/nextjslogo.png" alt="Shopify"> NextJs</li>
+            <li data-aos="flip-left"><img src="assets/images/react.png" alt="reactjs"> React js</li>
+            <li data-aos="flip-left"><img src="assets/images/node.png" alt="node"> Node js</li>
+            <li data-aos="flip-left"><img src="assets/images/wordpress.png" alt="Wordpress"> Wordpress</li>
+            <li data-aos="flip-left"><img src="assets/images/python.png" alt="python"> Python</li>
+            <li data-aos="flip-left"><img src="assets/images/aws.png" alt="aws"> AWS</li>
+            <li data-aos="flip-left"><img src="assets/images/mysql.png" alt="SQL"> MYSQL</li>
+            <li data-aos="flip-left"><img src="assets/images/mongodb.svg" alt="mongodb"> MongoDB</li>
         </ul>
     </section>
 
     <section class="companies" id="companies">
         <h2>Experience</h2>
         <ul>
-            <li>
+            <li data-aos="flip-up">
                 <img src="assets/images/ewing.png" alt="ewing">
                 <strong>Ewing Solutions</strong>
                 <p>Associate Software Engineer</p>
                 <p>2019 June - 2020 Feb</p>
             </li>
-            <li>
+            <li data-aos="flip-up">
                 <img src="assets/images/logo-nx.png" alt="neosolax">
                 <strong>NeoSolax</strong>
                 <p>Associate Software Engineer</p>
                 <p>2020 Feb - 2022 Jan</p>
             </li>
-            <li>
+            <li data-aos="flip-up">
                 <img src="assets/images/logo-nx.png" alt="neosolax">
                 <strong>NeoSolax</strong>
                 <p>Software Engineer</p>
                 <p>2022 Jan - 2022 Jun</p>
             </li>
-            <li>
+            <li data-aos="flip-up">
                 <img src="assets/images/logo-nx.png" alt="neosolax">
                 <strong>NeoSolax</strong>
                 <p>Senior Software Engineer</p>
@@ -1002,7 +1034,7 @@
             <p>Feel free to reach out via any of the methods below!</p>
 
             <div class="contact-details">
-                <div class="contact-item">
+                <div class="contact-item" data-aos="fade-right"> 
                     <img src="assets/images/email.webp" alt="Email Icon" />
                     <div>
                         <h3>Email</h3>
@@ -1016,7 +1048,7 @@
                         <p>Imbulana,<br> Ruwanwella, <br>Sri Lanka</p>
                     </div>
                 </div>
-                <div class="contact-item">
+                <div class="contact-item" data-aos="fade-left">
                     <img src="assets/images/phone.png" alt="Phone Icon" />
                     <div>
                         <h3>Phone</h3>
@@ -1077,7 +1109,7 @@
     });
     AOS.init({
         duration: 1000, // Animation duration in milliseconds
-        once: true, // Whether animation should happen only once
+        once: false, // Whether animation should happen only once
     });
 
     const projectCards = document.querySelectorAll('.project-card');
