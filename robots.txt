@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+
+# Optional: Point to sitemap (if you have one)
+Sitemap: https://thilabsl.info/sitemap.xml
