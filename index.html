@@ -38,10 +38,10 @@
             z-index:9;
             background: linear-gradient(90deg, #007bff, #00bcd4);
             color: #fff;
-            padding: 1rem 0;
+            padding: 1rem 2rem;
             text-align: center;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
         }
 
         header .logo {
@@ -89,7 +89,7 @@
 
         section {
             padding: 2rem;
-            max-width: 1240px;
+            max-width: 100%;
             margin: auto;
             background: #fff;
             margin-bottom: 2rem;
@@ -106,15 +106,14 @@
             border-radius: 15px;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
             margin-bottom: 2rem;
-            max-width: 1240px;
+            max-width: 100%;
         }
 
         .about img {
-            width: 180px;
-            height: 190px;
-            border-radius: 50%;
+            width: 280px;
+            height: 300px;
+            border-radius: 10px;
             margin-right: 2rem;
-            border: 5px solid #007bff;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -201,7 +200,7 @@
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             padding: 2rem;
-            max-width: 1240px;
+            max-width: 100%;
             margin: 0 auto;
         }
 
@@ -799,7 +798,7 @@
             </div>
             <div>
                 <h3>Sahan Thilakarathna</h3> <span>(BSc in Computer Science)</span><br>
-                <span>Senior Full-Stack Software Engineer - Magento 2 Specialist</span>
+                <span>Senior Full-Stack Software Engineer <br/> React | Magento2 | Shopify | PHP | NextJs | Nodejs</span>
             </div>
 
         </div>
@@ -814,17 +813,10 @@
             <a href="#resume" class="nav-button">Resume</a>
         </nav>
     </header>
-    <div id="loader">
-        <h2>Good Things Take Time</h2>
-        <div id="progress-bar">
-            <div id="progress"></div>
-        </div>
-        <p id="percentage">0%</p>
-    </div>
     <section class="about" id="about">
         <img src="assets/images/Sahan.jpeg" alt="Sahan Thilakarathna">
         <div class="text">
-            <h1>Full-Stack Web Developer Portfolio</h1>
+            <h1>About Me</h1>
             <p>Hello! I am Sahan Thilakarathna, a passionate and dedicated software engineer with experience in building
                 modern, efficient, and scalable applications. I love solving complex problems and creating impactful
                 solutions. With a strong background in various programming languages and technologies, I aim to continue
@@ -865,16 +857,22 @@
             <strong>Online Sex Dolls Shop(18+)</strong>
             <p>A Shopify Store in Australia</p>
         </div>
+        <div class="project-card" data-aos="fade-up" data-url="https://bonz.com" data-title="BONZ" data-image="assets/images/bonz.gif" data-tech="Magento 2 | PHP | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
+            <img class="project-img" src="assets/images/bonz.gif" alt="BONZ">
+            <img class="tech-img" src="assets/images/magento-2.webp">
+            <strong>BONZ</strong>
+            <p>A Magento 2 ecommerce website based in New Zealand.</p>
+        </div>
         <div class="project-card" data-aos="fade-up" data-url="https://heykensington.co.uk/" data-title="Heykensington" data-image="assets/images/heyken.gif" data-tech="NextJs | MongoDB | PayloadCMS" data-role="Full Stack Developer">
             <img class="project-img" src="assets/images/heyken.gif" alt="HeyKen">
             <img class="tech-img" src="assets/images/nextjslogo.png">
             <strong>Heykensington</strong>
             <p>Next Js Website for Studen Accommodation in UK</p>
         </div> 
-         <div class="project-card" data-aos="fade-up" data-url="https://preventmould.co.uk/" data-title="Kill Prevent Protect" data-image="assets/images/kpp.gif" data-tech="NextJs | MongoDB | PayloadCMS" data-role="Full Stack Developer">
+         <div class="project-card" data-aos="fade-up" data-url="https://preventmould.co.uk/" data-title="Prevent Mould" data-image="assets/images/kpp.gif" data-tech="NextJs | MongoDB | PayloadCMS" data-role="Full Stack Developer">
             <img class="project-img" src="assets/images/kpp.gif" alt="KPP">
             <img class="tech-img" src="assets/images/nextjslogo.png">
-            <strong>Kill Prevent Protect</strong>
+            <strong>Prevent Mould</strong>
             <p>Next Js Website for Pest Controll Company in UK</p>
         </div>   
         <div class="project-card" data-aos="fade-up" data-url="https://contentmart.com.au/" data-title="Content Marketing" data-image="assets/images/cm.gif" data-tech="NextJs | MongoDB | PayloadCMS" data-role="Full Stack Developer">
@@ -895,13 +893,6 @@
             <img class="tech-img" src="assets/images/contentful.webp">
             <strong>LongSong</strong>
             <p>A Contentful static website based in Australia.</p>
-        </div>
-        
-        <div class="project-card" data-aos="fade-up" data-url="https://bonz.com" data-title="BONZ" data-image="assets/images/bonz.gif" data-tech="Magento 2 | PHP | Javascript | KnockoutJs | MYSQL | AWS" data-role="Full Stack Developer">
-            <img class="project-img" src="assets/images/bonz.gif" alt="BONZ">
-            <img class="tech-img" src="assets/images/magento-2.webp">
-            <strong>BONZ</strong>
-            <p>A Magento 2 ecommerce website based in New Zealand.</p>
         </div>
         
         <div class="project-card" data-aos="fade-up" data-url="https://smithstbistrot.com.au" data-title="Smith St Bistrot" data-image="assets/images/smith.gif" data-tech="Contentful | ReactJs" data-role="Full Stack Developer">
@@ -952,12 +943,17 @@
             <p>A Shopify custom app developed for a AI search engine developed using python</p>
         </div>
         <div class="project-card" data-aos="fade-up" data-url="https://www.neosolax.com.au" data-title="NeoSolax Website" data-image="assets/images/Neosolax-Logo.png" data-tech="Wordpress | PHP | Javascript | CSS | DigitalOcean Droplets" data-role="Full Stack Developer">
-            <img class="project-img" src="assets/images/Neosolax-Logo.png" alt="Shopify">
+            <img class="project-img" src="assets/images/Neosolax-Logo.png" alt="NeoSolax">
             <img class="tech-img" src="assets/images/wordpress.png">
             <strong>NeoSolax Website</strong>
             <p>Company website for NeoSolax Pty</p>
         </div>
- 
+         <div class="project-card" data-aos="fade-up" data-url="https://www.neosolax.co.uk" data-title="NeoSolax UK Website" data-image="assets/images/Neosolax-Logo.png" data-tech="NextJs | MongoDD | Javascript | Tailwind " data-role="Full Stack Developer">
+            <img class="project-img" src="assets/images/Neosolax-Logo.png" alt="NeoSolax">
+            <img class="tech-img" src="assets/images/nextjslogo.png">
+            <strong>NeoSolax UK Website</strong>
+            <p>Company website for NeoSolax UK</p>
+        </div>
       
         <div class="popup-overlay" id="popup-overlay">
             <div class="popup-content">
@@ -1030,15 +1026,6 @@
                         <p class="date">2015 - 2019</p>
                     </div>
                 </div>
-                <!-- Second Item -->
-                <div class="timeline-item">
-                    <div class="icon"><i class="fas fa-book"></i></div>
-                    <div class="content">
-                        <h3 class="degree">Advanced Level</h3>
-                        <p class="institution">Kegalu Vidyalaya, Kegalle </p>
-                        <p class="date">2013</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -1092,25 +1079,7 @@
     </footer>
 </body>
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const progress = document.getElementById("progress");
-        const percentage = document.getElementById("percentage");
-        const loader = document.getElementById("loader");
-
-        let progressValue = 0;
-
-        const interval = setInterval(() => {
-            progressValue += 1; // Increment progress
-            progress.style.width = `${progressValue}%`; // Update progress bar width
-            percentage.textContent = `Loading ${progressValue}%`; // Update percentage text
-
-            if (progressValue === 100) {
-                clearInterval(interval); // Stop interval when 100% is reached
-                loader.style.display = "none"; // Hide loader
-            }
-        }, 20); // Adjust interval time for desired loading speed
-    });
-
+  
     // JavaScript for toggling the mobile menu
     document.addEventListener("DOMContentLoaded", () => {
         const logo = document.getElementById('logo');
